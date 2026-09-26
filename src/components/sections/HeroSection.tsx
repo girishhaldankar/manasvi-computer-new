@@ -4,7 +4,7 @@ import {
   House,
   MapPinCheck,
 } from "lucide-react"
-import { icons, images } from "../../assets"
+import {  images } from "../../assets"
 import { trustItems } from "../../data/site"
 import { Button } from "../ui/Button"
 import { Container } from "../ui/Container"

@@ -5,7 +5,7 @@ import {
   Phone,
   ShieldCheck,
 } from "lucide-react"
-import { icons, images } from "../../assets"
+import { images } from "../../assets"
 import { reviews } from "../../data/site"
 import { ReviewCard } from "../cards/ReviewCard"
 import { ArrowLink } from "../ui/ArrowLink"
