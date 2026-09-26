@@ -59,7 +59,8 @@ export function GalleryReviewsSection() {
   return (
     <>
       {/* Work Gallery */}
-      <section className="relative overflow-hidden py-20 md:py-28">
+      <section   id="gallery"
+className="relative overflow-hidden py-20 md:py-28">
         <div className="pointer-events-none absolute left-[-120px] top-24 h-72 w-72 rounded-full bg-[#dbeafe]/50 blur-3xl" />
 
         <Container className="relative">
@@ -226,7 +227,7 @@ export function GalleryReviewsSection() {
           </div>
 
           {/* Reviews */}
-          <div>
+          <div id="reviews">
             <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <span className="inline-flex rounded-full bg-[#fff7ed] px-3 py-1 text-[10px] font-bold tracking-[0.1em] text-[#c2410c]">
