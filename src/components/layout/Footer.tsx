@@ -63,7 +63,7 @@ export function Footer() {
   )
 }
 
-function FooterList({ title, items }: { title: string; items: string[] }) {
+function FooterList({ title, items }: { title: string; items: string[] }) { 
   return (
     <div>
       <h3 className="font-['Inter:Bold'] text-xs font-bold tracking-[.05em]">

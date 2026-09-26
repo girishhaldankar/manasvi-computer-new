@@ -2,7 +2,6 @@ import { icons, images } from "../../assets"
 import { trustItems } from "../../data/site"
 import { Button } from "../ui/Button"
 import { Container } from "../ui/Container"
-import testImage from "../../assets/test.png";
 
 export function HeroSection() {
   return (
@@ -21,11 +20,7 @@ export function HeroSection() {
               <span className="text-[#1d4ed8]">We’ve Got You Covered.</span>
             </h1>
             
-            <img
-  src={testImage}
-  alt="Test"
-  style={{ width: 200, height: 150, objectFit: "contain" }}
-/>
+
             <p className="mt-4 max-w-xl text-base leading-7 text-[#434655] md:text-lg">
               Reliable computer repair, laptop parts, hardware, CCTV,
               networking, printer services and website development for homes,
@@ -93,7 +88,7 @@ export function HeroSection() {
                     Hardware Bench Diagnostics
                   </strong>
                   <small className="text-[11px] text-[#5c647a]">
-                    Genuine DDR4/DDR5, Gen4 NVMe & chip tests
+                    Genuine DDR4  /DDR5, Gen4 NVMe & chip tests
                   </small>
                 </span>
                 <b className="rounded-md bg-[#eff4ff] px-2 py-1 text-[11px] text-[#1d4ed8]">
