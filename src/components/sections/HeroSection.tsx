@@ -1,7 +1,14 @@
+import {
+  BadgeCheck,
+  UserRoundCheck,
+  House,
+  MapPinCheck,
+} from "lucide-react"
 import { icons, images } from "../../assets"
 import { trustItems } from "../../data/site"
 import { Button } from "../ui/Button"
 import { Container } from "../ui/Container"
+
 
 export function HeroSection() {
   return (
@@ -41,26 +48,31 @@ export function HeroSection() {
                 Explore Services →
               </Button>
             </div>
-            <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-4">
-              {[
-                "Genuine Parts",
-                "Direct Technician",
-                "Doorstep & Workshop",
-                "Local Support",
-              ].map((text, index) => (
-                <div
-                  key={text}
-                  className="flex min-h-14 items-center gap-2 rounded-xl border border-[#e5eeff] bg-white px-3 py-2 font-['Inter:Semi_Bold'] text-xs font-semibold"
-                >
-                  <img
-                    src={icons[39 + index]}
-                    alt=""
-                    className="max-h-4 max-w-4"
-                  />
-                  {text}
-                </div>
-              ))}
-            </div>
+         <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
+  {[
+    { text: "Genuine Parts", icon: BadgeCheck },
+    { text: "Direct Technician", icon: UserRoundCheck },
+    { text: "Doorstep & Workshop", icon: House },
+    { text: "Local Support", icon: MapPinCheck },
+  ].map(({ text, icon: Icon }) => (
+    <div
+      key={text}
+      className="group flex min-h-[62px] items-center gap-3 rounded-2xl border border-[#dfe8f8] bg-gradient-to-br from-[#f8fbff] to-white px-3.5 py-3 shadow-[0_3px_12px_rgba(29,78,216,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#cbdaf2] hover:shadow-[0_7px_18px_rgba(29,78,216,0.09)]"
+    >
+      <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-[#eff4ff] text-[#1d4ed8] ring-1 ring-[#dce8fb]">
+        <Icon
+          size={18}
+          strokeWidth={2}
+          className="transition-transform duration-300 group-hover:scale-110"
+        />
+      </span>
+
+      <span className="font-['Inter:Semi_Bold'] text-[11px] font-semibold leading-[15px] text-[#24344d]">
+        {text}
+      </span>
+    </div>
+  ))}
+</div>
           </div>
           <div className="relative rounded-3xl border border-[#e5eeff] bg-white p-4 shadow-lg">
             <div className="relative h-[320px] overflow-hidden rounded-2xl bg-[#f1f5f9] md:h-[384px]">
