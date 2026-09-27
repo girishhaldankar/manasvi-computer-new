@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { MessageCircle } from "lucide-react"
+import { MessageCircle, Phone } from "lucide-react"
 import { images } from "../../assets"
 import { navItems } from "../../data/site"
 import { Button } from "../ui/Button"
@@ -22,7 +22,7 @@ export function Header() {
           </span>
 
           <span>
-            <strong className="block font-extrabold text-[17px] leading-[21px] font-extrabold tracking-[-.025em]">
+            <strong className="block text-[17px] font-extrabold leading-[21px] tracking-[-.025em]">
               MANASVI COMPUTER
             </strong>
 
@@ -40,27 +40,31 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium hover:text-[#1d4ed8]"
+              className="text-sm font-medium transition-colors hover:text-[#1d4ed8]"
             >
               {item.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-2 lg:flex">
+          <Button
+            href="tel:+919076335902"
+            variant="white"
+            className="!min-h-8 !rounded-full !border !border-[#dbe5f5] !bg-white !px-3 !py-1.5 !text-[#1d4ed8]"
+          >
+            <Phone size={13} strokeWidth={2} aria-hidden="true" />
+            Call Now
+          </Button>
+
           <Button
             href="https://wa.me/919076335902"
             variant="green"
             className="!min-h-8 !rounded-full !border !border-[#a7f3d0]/60 !bg-[#ecfdf5] !px-3 !py-1.5 !text-[#006948]"
           >
-            <MessageCircle
-              size={13}
-              strokeWidth={2}
-              aria-hidden="true"
-            />
+            <MessageCircle size={13} strokeWidth={2} aria-hidden="true" />
             WhatsApp
           </Button>
-          
         </div>
 
         <button
