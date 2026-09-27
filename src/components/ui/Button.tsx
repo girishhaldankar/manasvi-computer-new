@@ -21,7 +21,7 @@ export function Button({
 }: ButtonProps) {
   return (
     <a
-      className={`inline-flex min-h-10 items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-["Inter:Semi_Bold"] text-xs font-semibold transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1d4ed8] ${variants[variant]} ${className}`}
+      className={`inline-flex min-h-10 items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-semibold  text-xs font-semibold transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1d4ed8] ${variants[variant]} ${className}`}
       {...props}
     >
       {children}

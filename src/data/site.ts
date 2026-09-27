@@ -1,4 +1,20 @@
-import { icons, images } from "../assets"
+import {
+  Gauge,
+  Monitor,
+  Camera,
+  WifiOff,
+  HardDrive,
+  Fan,
+  Printer,
+  Globe,
+  UserRoundCheck,
+  BadgeCheck,
+  Wrench,
+  MapPinCheck,
+  type LucideIcon,
+} from "lucide-react"
+
+import { images } from "../assets"
 
 export const navItems = [
   { label: "Services", href: "#services" },
@@ -8,12 +24,28 @@ export const navItems = [
   { label: "Contact", href: "#contact" },
 ]
 
-export const trustItems = [
-  ["Personal Service", "Direct attention for every customer.", icons[0]],
-  ["Genuine Hardware", "Quality parts and components.", icons[1]],
-  ["Practical Solutions", "Repair, upgrade or replace.", icons[2]],
-  ["Local Support", "A technician you can actually reach.", icons[3]],
-] as const
+export const trustItems: [string, string, LucideIcon][] = [
+  [
+    "Personal Service",
+    "Direct attention for every customer.",
+    UserRoundCheck,
+  ],
+  [
+    "Genuine Hardware",
+    "Quality parts and components.",
+    BadgeCheck,
+  ],
+  [
+    "Practical Solutions",
+    "Repair, upgrade or replace.",
+    Wrench,
+  ],
+  [
+    "Local Support",
+    "A technician you can actually reach.",
+    MapPinCheck,
+  ],
+]
 
 export const categories = [
   {
@@ -29,6 +61,7 @@ export const categories = [
     ],
     link: "Explore Laptop Parts",
   },
+
   {
     badge: "PC Components",
     title: "Computer Hardware",
@@ -41,6 +74,7 @@ export const categories = [
     ],
     link: "Explore Hardware",
   },
+
   {
     badge: "Everyday Accessories",
     title: "Computer Accessories",
@@ -54,6 +88,7 @@ export const categories = [
     ],
     link: "Explore Accessories",
   },
+
   {
     badge: "Network Equipment",
     title: "Networking Hardware",
@@ -85,8 +120,9 @@ export const hardwarePanels = [
       "DC Jack",
       "Internal Speaker",
     ],
-     image: images.laptopParts,
+    image: images.laptopParts,
   },
+
   {
     number: "02",
     title: "Computer Hardware",
@@ -105,6 +141,7 @@ export const hardwarePanels = [
     ],
     image: images.hardware,
   },
+
   {
     number: "03",
     title: "Computer Accessories",
@@ -121,8 +158,9 @@ export const hardwarePanels = [
       "Laptop Stand",
       "Cooling Pad",
     ],
-     image: images.computerAccessories,
+    image: images.computerAccessories,
   },
+
   {
     number: "04",
     title: "Networking Hardware",
@@ -137,90 +175,109 @@ export const hardwarePanels = [
       "Network Adapters",
       "RJ45 Connectors",
     ],
-     image: images.laptopParts,
+    image: images.laptopParts,
   },
 ]
 
-export const problems = [
+export const problems: [
+  string,
+  string,
+  string,
+  LucideIcon
+][] = [
   [
     "Slow Laptop or PC?",
     "Upgrade, diagnose and optimize your system to boot in seconds.",
     "Fast Optimization",
-    icons[7],
+    Gauge,
   ],
+
   [
     "Broken Laptop Screen?",
     "Flickering or cracked screen replacement and display cable troubleshooting.",
     "Screen Replacement",
-    icons[8],
+    Monitor,
   ],
+
   [
     "CCTV Phone Sync?",
     "Connect and configure secure remote live viewing on Android and iPhone.",
     "P2P Remote Sync",
-    icons[9],
+    Camera,
   ],
+
   [
     "Wi-Fi Dead Zones?",
     "Improve coverage and throughput across your shop, office or residence.",
     "Eliminate Dead Zones",
-    icons[10],
+    WifiOff,
   ],
+
   [
     "Need More Storage?",
     "Upgrade to high-speed NVMe SSD or add external automatic backups.",
     "SSD Upgrade",
-    icons[11],
+    HardDrive,
   ],
+
   [
     "PC Running Hot?",
     "Cooling fan servicing, thermal paste replenishment and airflow overhaul.",
     "Cooling Solutions",
-    icons[12],
+    Fan,
   ],
+
   [
     "Printer Not Connecting?",
     "Configure wireless drivers, paper feed rollers and network printer sharing.",
     "Fix Printer",
-    icons[13],
+    Printer,
   ],
+
   [
     "Need a Business Website?",
     "We design and develop modern, fast, responsive websites for local businesses.",
     "Explore Web Studio",
-    icons[14],
+    Globe,
   ],
-] as const
+]
 
 export const features = [
   [
     "Personal Attention",
     "Dedicated consultation for your exact requirements rather than cookie-cutter advice.",
   ],
+
   [
     "Clear Communication",
     "Transparent diagnosis and honest quotes before we start any repair.",
   ],
+
   [
     "Honest Diagnostics",
     "We test thoroughly and tell you if a component truly requires replacement.",
   ],
+
   [
     "Genuine Hardware",
     "Original and high-grade verified components backed by vendor warranties.",
   ],
+
   [
     "Practical Solutions",
     "Cost-effective upgrades recommended before asking you to replace machines.",
   ],
+
   [
     "Home & Business Support",
     "Equally prepared for domestic laptops and multi-terminal shop networks.",
   ],
+
   [
     "Doorstep Service",
     "On-site support across Mumbai for network cabling, CCTV, and desktop setups.",
   ],
+
   [
     "Post-Service Support",
     "Always reachable on phone and WhatsApp for peace of mind.",
@@ -235,6 +292,7 @@ export const reviews = [
     name: "Rajesh K.",
     role: "Verified Home Client",
   },
+
   {
     service: "4-Camera CCTV",
     quote:
@@ -242,6 +300,7 @@ export const reviews = [
     name: "Mahesh Patel",
     role: "Shop Owner, Mumbai",
   },
+
   {
     service: "Wi-Fi & Printer",
     quote:

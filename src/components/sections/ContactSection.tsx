@@ -60,7 +60,7 @@ export function ContactSection() {
                 IMMEDIATE TECHNICAL SUPPORT
               </div>
 
-              <h2 className="mt-4 font-['Plus_Jakarta_Sans:ExtraBold'] text-3xl font-extrabold tracking-tight md:text-4xl">
+              <h2 className="mt-4 font-extrabold text-3xl font-extrabold tracking-tight md:text-4xl">
                 Need Technology Help?
                 <br />
                 <span className="text-blue-200">Let’s Fix It.</span>
@@ -226,7 +226,7 @@ Thank you.`
                     SERVICE ENQUIRY
                   </span>
 
-                  <h2 className="mt-3 font-['Plus_Jakarta_Sans:Bold'] text-2xl font-bold text-[#0b1c30]">
+                  <h2 className="mt-3 font-bold  text-2xl font-bold text-[#0b1c30]">
                     Request Service or Quote
                   </h2>
 
@@ -291,7 +291,7 @@ Thank you.`
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="group flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#1d4ed8] px-5 py-3 font-['Inter:Semi_Bold'] text-xs font-semibold text-white shadow-[0_8px_20px_rgba(29,78,216,0.20)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1e40af] hover:shadow-[0_12px_26px_rgba(29,78,216,0.25)]"
+                    className="group flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#1d4ed8] px-5 py-3 font-semibold  text-xs font-semibold text-white shadow-[0_8px_20px_rgba(29,78,216,0.20)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1e40af] hover:shadow-[0_12px_26px_rgba(29,78,216,0.25)]"
                   >
                     <MessageCircle
                       size={17}
@@ -319,7 +319,7 @@ Thank you.`
               FIND OUR WORKSHOP
             </span>
 
-            <h2 className="mt-3 font-['Plus_Jakarta_Sans:ExtraBold'] text-2xl font-extrabold text-[#0b1c30] md:text-3xl">
+            <h2 className="mt-3 font-extrabold text-2xl font-extrabold text-[#0b1c30] md:text-3xl">
               Visit Manasvi Computers
             </h2>
 
@@ -351,7 +351,7 @@ Thank you.`
                   <MapPin size={21} />
                 </div>
 
-                <h3 className="mt-5 font-['Plus_Jakarta_Sans:ExtraBold'] text-2xl font-extrabold text-[#0b1c30]">
+                <h3 className="mt-5 font-extrabold text-2xl font-extrabold text-[#0b1c30]">
                   Manasvi Computers
                 </h3>
 
@@ -434,7 +434,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block font-['Inter:Semi_Bold'] text-xs font-semibold text-[#24344d]">
+      <span className="mb-1.5 block font-semibold  text-xs font-semibold text-[#24344d]">
         {label}
       </span>
 

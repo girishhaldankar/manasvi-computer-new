@@ -16,7 +16,7 @@ export function WebStudioSection() {
       <Container className="grid items-center gap-12 lg:grid-cols-2">
         <div>
           <Badge>DIGITAL SERVICES</Badge>
-          <h2 className="mt-4 font-['Plus_Jakarta_Sans:ExtraBold'] text-3xl leading-10 font-extrabold tracking-[-.025em] md:text-4xl">
+          <h2 className="mt-4 font-extrabold text-3xl leading-10 font-extrabold tracking-[-.025em] md:text-4xl">
             We Build Websites That Work for Your Business
           </h2>
           <p className="mt-4 text-base leading-6 text-[#434655]">

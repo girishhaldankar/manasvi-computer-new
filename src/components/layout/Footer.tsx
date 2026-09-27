@@ -33,7 +33,7 @@ export function Footer() {
                 className="size-8 rounded-lg"
               />
 
-              <strong className="font-['Plus_Jakarta_Sans:ExtraBold'] text-base font-extrabold">
+              <strong className="font-extrabold text-base font-extrabold">
                 MANASVI COMPUTER
               </strong>
             </a>
@@ -57,7 +57,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-['Inter:Bold'] text-xs font-bold tracking-[.05em]">
+            <h3 className="font-bold text-xs font-bold tracking-[.05em]">
               CONTACT
             </h3>
 
@@ -124,7 +124,7 @@ function FooterList({
 }) {
   return (
     <div>
-      <h3 className="font-['Inter:Bold'] text-xs font-bold tracking-[.05em]">
+      <h3 className="font-bold text-xs font-bold tracking-[.05em]">
         {title}
       </h3>
 

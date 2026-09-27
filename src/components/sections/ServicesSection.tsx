@@ -16,7 +16,7 @@ export function ServicesSection() {
             title="Complete Technology Support Under One Roof"
             description="From repairing a laptop to upgrading a PC, installing CCTV or building a business website, Manasvi Computer provides practical technology solutions from one place."
           />
-          <div className="mt-12 grid gap-6 lg:grid-cols-[7fr_5fr]">
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
             <ServiceCard
               title="Computer & Laptop"
               description="Complete hardware repairs, chip-level troubleshooting, motherboard diagnostics, operating system maintenance and performance tuning for major brands."
@@ -25,17 +25,25 @@ export function ServicesSection() {
               image={images.laptopTools}
               link="Book Laptop Service"
             >
-              <ul>
-                {[
-                  "Motherboard & chip repairs",
-                  "Windows & macOS setup",
-                  "Antivirus & malware clean",
-                  "Data recovery & disk clones",
-                  "RAM & NVMe SSD upgrades",
-                ].map((item) => (
-                  <li key={item}>✓ {item}</li>
-                ))}
-              </ul>
+              <ul className="space-y-2.5">
+  {[
+    "Motherboard & chip repairs",
+    "Windows & macOS setup",
+    "Antivirus & malware clean",
+    "Data recovery & disk clones",
+    "RAM & NVMe SSD upgrades",
+  ].map((item) => (
+    <li
+      key={item}
+      className="flex items-center gap-2.5 text-[11px] font-medium leading-5 text-[#526078]"
+    >
+      <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-[#e7effc] text-[10px] font-bold text-[#1d4ed8]">
+        ✓
+      </span>
+      {item}
+    </li>
+  ))}
+</ul>
             </ServiceCard>
             <ServiceCard
               title="CCTV & Security"
@@ -46,15 +54,23 @@ export function ServicesSection() {
               link="Get CCTV Service"
               green
             >
-              <ul>
-                {[
-                  "Dome & Bullet camera setups",
-                  "DVR / NVR storage replacement",
-                  "Mobile P2P remote live sync",
-                ].map((item) => (
-                  <li key={item}>✓ {item}</li>
-                ))}
-              </ul>
+              <ul className="space-y-2.5">
+  {[
+    "Dome & Bullet camera setups",
+    "DVR / NVR storage replacement",
+    "Mobile P2P remote live sync",
+  ].map((item) => (
+    <li
+      key={item}
+      className="flex items-center gap-2.5 text-[11px] font-medium leading-5 text-[#526078]"
+    >
+      <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-[#def5e8] text-[10px] font-bold text-[#047857]">
+        ✓
+      </span>
+      {item}
+    </li>
+  ))}
+</ul>
             </ServiceCard>
           </div>
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

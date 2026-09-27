@@ -100,7 +100,7 @@ className="relative overflow-hidden py-20 md:py-28">
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-7">
-                <h3 className="font-['Plus_Jakarta_Sans:ExtraBold'] text-2xl font-extrabold text-white md:text-3xl">
+                <h3 className="font-extrabold text-2xl font-extrabold text-white md:text-3xl">
                   {gallery[0][0]}
                 </h3>
 
@@ -234,7 +234,7 @@ className="relative overflow-hidden py-20 md:py-28">
                   CUSTOMER FEEDBACK
                 </span>
 
-                <h2 className="mt-3 font-['Plus_Jakarta_Sans:ExtraBold'] text-2xl font-extrabold text-[#0b1c30] md:text-3xl">
+                <h2 className="mt-3 font-extrabold text-2xl font-extrabold text-[#0b1c30] md:text-3xl">
                   What Local Customers Say
                 </h2>
 

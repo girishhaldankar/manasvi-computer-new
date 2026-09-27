@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 @import "tailwindcss";
 
@@ -9,10 +9,11 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  color: #0b1c30;
   background: #f8f9ff;
+  color: #0b1c30;
   font-family: "Inter", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 button,
@@ -32,9 +33,11 @@ img {
 }
 
 ::selection {
-  color: white;
+  color: #ffffff;
   background: #1d4ed8;
 }
+
+/* Form fields */
 
 .field {
   width: 100%;
@@ -50,48 +53,4 @@ img {
 .field:focus {
   border-color: #1d4ed8;
   box-shadow: 0 0 0 3px rgb(29 78 216 / 0.1);
-}
-
-.font-\[\'Inter\:Bold\'\] {
-  font-family: "Inter", Arial, sans-serif;
-}
-
-.font-\[\'Inter\:Medium\'\] {
-  font-family: "Inter", Arial, sans-serif;
-}
-
-.font-\[\'Inter\:Regular\'\] {
-  font-family: "Inter", Arial, sans-serif;
-}
-
-.font-\[\'Inter\:Semi\ Bold\'\] {
-  font-family: "Inter", Arial, sans-serif;
-}
-
-.font-\[\'Plus_Jakarta_Sans\:Bold\'\] {
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
-}
-
-.font-\[\'Plus_Jakarta_Sans\:ExtraBold\'\] {
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
-}
-
-/* Global typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
-}
-
-button,
-a {
-  font-family: "Inter", Arial, sans-serif;
-}
-
-.font-\[\'Inter\:Semi_Bold\'\] {
-  font-family: "Inter", Arial, sans-serif;
-  font-weight: 600;
 }

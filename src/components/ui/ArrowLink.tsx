@@ -7,7 +7,7 @@ export function ArrowLink({
 }: AnchorHTMLAttributes<HTMLAnchorElement>) {
   return (
     <a
-      className={`font-["Inter:Bold"] text-xs font-bold text-[#1d4ed8] hover:underline ${className}`}
+      className={`font-bold text-xs font-bold text-[#1d4ed8] hover:underline ${className}`}
       {...props}
     >
       {children} <span aria-hidden="true">→</span>
