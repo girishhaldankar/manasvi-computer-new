@@ -21,7 +21,7 @@ const companyLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#1e293b] bg-[#0b1c30] text-white">
+    <footer className="border-t border-[#24445B] bg-[#071A2B] text-white">
       <Container className="py-12">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
@@ -38,7 +38,7 @@ export function Footer() {
               </strong>
             </a>
 
-            <p className="mt-3 text-xs font-semibold text-[#85f8c4]">
+            <p className="mt-3 text-xs font-semibold text-[#8CBFFF]">
               Computer • Hardware • CCTV • Web
             </p>
 

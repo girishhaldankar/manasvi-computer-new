@@ -27,10 +27,10 @@ export function MobileMenu({
         ))}
       </nav>
       <div className="mt-4 grid grid-cols-2 gap-3">
-        <Button href="https://wa.me/919076335902" variant="green">
+        <Button href="https://wa.me/919076335902" variant="green" className="!text-white">
           WhatsApp
         </Button>
-        <Button href="#contact" onClick={onClose}>
+        <Button href="#contact" onClick={onClose} className="!text-white">
           Get Service
         </Button>
       </div>

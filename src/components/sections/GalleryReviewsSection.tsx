@@ -7,8 +7,7 @@ import {
 } from "lucide-react"
 import { motion } from "motion/react"
 import { images } from "../../assets"
-import { reviews } from "../../data/site"
-import { ReviewCard } from "../cards/ReviewCard"
+
 import { ArrowLink } from "../ui/ArrowLink"
 import { Container } from "../ui/Container"
 import { SectionHeading } from "../ui/SectionHeading"
@@ -64,7 +63,7 @@ export function GalleryReviewsSection() {
       {/* Work Gallery */}
       <section
         id="gallery"
-        className="relative overflow-hidden py-20 md:py-28"
+        className="relative overflow-hidden bg-white py-20 md:py-28"
       >
         <div className="pointer-events-none absolute left-[-120px] top-24 h-72 w-72 rounded-full bg-[#dbeafe]/50 blur-3xl" />
 
@@ -183,8 +182,8 @@ export function GalleryReviewsSection() {
       </section>
 
       {/* Local Presence + Reviews */}
-      <section className="relative overflow-hidden border-y border-[#dfe8f8] bg-gradient-to-b from-[#f4f7ff] via-white to-[#f8fbff] py-20 md:py-28">
-        <div className="pointer-events-none absolute bottom-[-120px] right-[-100px] h-80 w-80 rounded-full bg-[#d1fae5]/40 blur-3xl" />
+      <section className="relative overflow-hidden border-y border-[#E2E8F0] bg-[#F5F8FC] py-20 md:py-28">
+        <div className="pointer-events-none absolute bottom-[-120px] right-[-100px] h-80 w-80 rounded-full bg-[#DCEBFA]/35 blur-3xl" />
 
         <Container className="relative space-y-20">
           {/* Local Presence */}
@@ -231,9 +230,9 @@ export function GalleryReviewsSection() {
                       {title}
                     </p>
 
-                    <h3 className="mt-1.5 text-sm font-bold leading-5 text-[#0b1c30]">
-                      {value}
-                    </h3>
+                    <p className="mt-1.5 text-sm font-bold leading-5 text-[#0b1c30]">
+  {value}
+</p>
 
                     <p className="mt-1.5 text-[11px] leading-5 text-[#5c647a]">
                       {note}
@@ -249,61 +248,6 @@ export function GalleryReviewsSection() {
                   </motion.article>
                 ),
               )}
-            </Stagger>
-          </div>
-
-          {/* Reviews */}
-          <div id="reviews">
-            <Reveal>
-              <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-                <div>
-                  <span className="inline-flex rounded-full bg-[#fff7ed] px-3 py-1 text-[10px] font-bold tracking-[0.1em] text-[#c2410c]">
-                    CUSTOMER FEEDBACK
-                  </span>
-
-                  <h2 className="mt-3 text-2xl font-extrabold text-[#0b1c30] md:text-3xl">
-                    What Local Customers Say
-                  </h2>
-
-                  <p className="mt-2 max-w-xl text-sm leading-6 text-[#5c647a]">
-                    Real feedback from customers who have used our repair,
-                    hardware and technology services.
-                  </p>
-                </div>
-
-                <div className="flex w-fit items-center gap-3 rounded-2xl border border-[#e5e7eb] bg-white px-4 py-3 shadow-sm">
-                  <div className="flex size-10 items-center justify-center rounded-xl bg-[#fff7ed] text-[#f59e0b]">
-                    ★
-                  </div>
-
-                  <div>
-                    <div className="flex items-center gap-1">
-                      <span className="text-sm font-bold text-[#0b1c30]">
-                        5.0
-                      </span>
-                      <span className="text-xs tracking-wide text-[#f59e0b]">
-                        ★★★★★
-                      </span>
-                    </div>
-
-                    <p className="text-[10px] text-[#7a8499]">
-                      Local customer rating
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-
-            <Stagger className="mt-8 grid gap-6 lg:grid-cols-3">
-              {reviews.map((review) => (
-                <motion.div
-                  key={review.name}
-                  variants={staggerItem}
-                  className="rounded-[22px] border border-[#dfe8f8] bg-white p-1 shadow-[0_6px_24px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_32px_rgba(15,23,42,0.09)]"
-                >
-                  <ReviewCard {...review} />
-                </motion.div>
-              ))}
             </Stagger>
           </div>
 

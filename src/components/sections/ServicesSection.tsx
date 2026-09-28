@@ -12,9 +12,9 @@ import { SectionHeading } from "../ui/SectionHeading"
 export function ServicesSection() {
   return (
     <>
-      <section id="services" className="py-20 md:py-24">
+      <section id="services" className="bg-[#F5F8FC] py-20 md:py-24">
         <Container>
-          <Reveal>
+          <Reveal className="[&_h2]:!text-[#0B1726] [&_p]:!text-[#475569] [&>div>span:first-child]:!border-[#D6E5FA] [&>div>span:first-child]:!bg-white [&>div>span:first-child]:!text-[#1264D8]">
             <SectionHeading
               eyebrow="WHAT WE DO"
               title="Complete Technology Support Under One Roof"
@@ -42,7 +42,7 @@ export function ServicesSection() {
                   ].map((item) => (
                     <li
                       key={item}
-                      className="flex items-center gap-2.5 text-[11px] font-medium leading-5 text-[#526078]"
+                      className="flex items-center gap-2.5 text-[11px] font-medium leading-5 text-[#475569]"
                     >
                       <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-[#e7effc] text-[10px] font-bold text-[#1d4ed8]">
                         ✓
@@ -72,9 +72,9 @@ export function ServicesSection() {
                   ].map((item) => (
                     <li
                       key={item}
-                      className="flex items-center gap-2.5 text-[11px] font-medium leading-5 text-[#526078]"
+                      className="flex items-center gap-2.5 text-[11px] font-medium leading-5 text-[#475569]"
                     >
-                      <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-[#def5e8] text-[10px] font-bold text-[#047857]">
+                      <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-[#EAF2FF] text-[10px] font-bold text-[#1264D8]">
                         ✓
                       </span>
                       {item}
@@ -99,7 +99,7 @@ export function ServicesSection() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-24">
+      <section className="bg-white py-20 md:py-24">
         <Container>
           <Reveal>
             <SectionHeading

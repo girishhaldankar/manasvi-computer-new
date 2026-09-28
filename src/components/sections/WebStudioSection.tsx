@@ -1,7 +1,7 @@
 import { motion } from "motion/react"
 import { images } from "../../assets"
 import { Stagger, staggerItem } from "../motion/Stagger"
-import { Badge } from "../ui/Badge"
+import { SectionEyebrow } from "../ui/SectionEyebrow"
 import { Button } from "../ui/Button"
 import { Container } from "../ui/Container"
 
@@ -14,7 +14,7 @@ const webFeatures = [
 
 export function WebStudioSection() {
   return (
-    <section id="web-studio" className="py-20 md:py-24">
+    <section id="web-studio" className="bg-[#F5F8FC] py-20 md:py-24">
       <Container className="grid items-center gap-12 lg:grid-cols-2">
         {/* Left Content */}
         <motion.div
@@ -35,13 +35,13 @@ export function WebStudioSection() {
             ease: [0.16, 1, 0.3, 1],
           }}
         >
-          <Badge>DIGITAL SERVICES</Badge>
+          <SectionEyebrow>DIGITAL SERVICES</SectionEyebrow>
 
-          <h2 className="mt-4 text-3xl font-extrabold leading-10 tracking-[-.025em] md:text-4xl">
+          <h2 className="mt-4 text-3xl font-extrabold leading-10 tracking-[-.025em] text-[#0B1726] md:text-4xl">
             We Build Websites That Work for Your Business
           </h2>
 
-          <p className="mt-4 text-base leading-6 text-[#434655]">
+          <p className="mt-4 text-base leading-6 text-[#475569]">
             Modern, responsive and professional websites for local businesses,
             shops, service providers and growing companies. Clean UI design,
             fast loading speeds, and SEO-ready structure.

@@ -11,7 +11,7 @@ export function HardwareSection() {
   return (
     <section
       id="hardware"
-      className="relative overflow-hidden border-y border-[#dfe8f5] bg-[#f3f7fc] py-20 md:py-24"
+      className="relative overflow-hidden border-y border-[#E2E8F0] bg-[#F5F8FC] py-20 md:py-24"
     >
       <div className="pointer-events-none absolute -right-32 top-20 z-0 size-[420px] rounded-full bg-[#dbeafe]/40 blur-3xl" />
 

@@ -13,7 +13,7 @@ import { motion } from "motion/react"
 import { images } from "../../assets"
 import { features } from "../../data/site"
 import { FeatureCard } from "../cards/FeatureCard"
-import { Badge } from "../ui/Badge"
+import { SectionEyebrow } from "../ui/SectionEyebrow"
 import { Button } from "../ui/Button"
 import { Container } from "../ui/Container"
 import { Reveal } from "../motion/Reveal"
@@ -53,22 +53,22 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="border-y border-[#e5eeff] bg-[#eff4ff]/30 py-20 md:py-24"
+      className="border-y border-[#29445B] bg-[#071A2B] py-20 text-white md:py-24"
     >
       <Container className="space-y-16">
         {/* Why Manasvi */}
         <div className="grid gap-8 lg:grid-cols-[5fr_7fr]">
           <Reveal>
             <div className="self-center">
-              <Badge>WHY MANASVI</Badge>
+              <SectionEyebrow tone="dark">WHY MANASVI</SectionEyebrow>
 
-              <h2 className="mt-3 text-4xl font-extrabold leading-10 text-[#0b1c30]">
+              <h2 className="mt-3 text-4xl font-extrabold leading-10 text-white">
                 Direct Technician Support.
                 <br />
                 No Middlemen.
               </h2>
 
-              <p className="mt-4 text-sm leading-[22.75px] text-[#434655]">
+              <p className="mt-4 text-sm leading-[22.75px] text-[#CBD5E1]">
                 When you call or hand over your hardware, you speak directly
                 with the skilled engineer diagnosing and repairing your
                 machine. No confusing call center queues or inflated
@@ -78,7 +78,7 @@ export function AboutSection() {
               <motion.img
                 src={images.technician}
                 alt="Technician inspecting a laptop motherboard"
-                className="mt-6 h-[364px] w-full rounded-2xl border border-[#dbe5f5] object-cover shadow-[0_6px_22px_rgba(15,23,42,0.06)]"
+                className="mt-6 h-[364px] w-full rounded-2xl border border-white/15 object-cover shadow-[0_8px_24px_rgba(0,0,0,0.2)]"
                 initial={{ opacity: 0, scale: 0.98 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -113,10 +113,10 @@ export function AboutSection() {
 
         {/* Our Process */}
         <Reveal>
-          <div className="border-t border-[#e5eeff] pt-8 text-center">
-            <Badge>OUR PROCESS</Badge>
+          <div className="border-t border-[#29445B] pt-8 text-center">
+            <SectionEyebrow tone="dark">OUR PROCESS</SectionEyebrow>
 
-            <h2 className="mt-2 text-2xl font-bold text-[#0b1c30]">
+            <h2 className="mt-2 text-2xl font-bold text-white">
               Simple From Start to Finish
             </h2>
 
@@ -127,25 +127,25 @@ export function AboutSection() {
                   variants={staggerItem}
                   className={`group rounded-2xl border p-5 transition-all duration-300 hover:-translate-y-0.5 ${
                     index === 3
-                      ? "border-[#d6eee4] bg-[#f7fcfa] hover:border-[#bfe4d4] hover:bg-white"
-                      : "border-[#dbe5f5] bg-[#f7faff] hover:border-[#c7d8ef] hover:bg-white"
+                      ? "border-[#29445B] bg-[#0B2942] hover:border-[#397AB8] hover:bg-[#0D304D]"
+                      : "border-[#29445B] bg-[#0B2942] hover:border-[#397AB8] hover:bg-[#0D304D]"
                   }`}
                 >
                   <b
                     className={`text-2xl ${
                       index === 3
-                        ? "text-[#059669]/50"
-                        : "text-[#1d4ed8]/50"
+                        ? "text-[#8CBFFF]/70"
+                        : "text-[#62A8FF]/70"
                     }`}
                   >
                     {number}
                   </b>
 
-                  <h3 className="mt-1 text-sm font-bold text-[#0b1c30]">
+                  <h3 className="mt-1 text-sm font-bold text-white">
                     {title}
                   </h3>
 
-                  <p className="mt-1 text-xs leading-4 text-[#5c647a]">
+                  <p className="mt-1 text-xs leading-4 text-[#CBD5E1]">
                     {text}
                   </p>
                 </motion.article>
@@ -156,15 +156,15 @@ export function AboutSection() {
 
         {/* About */}
         <Reveal delay={0.08}>
-          <div className="rounded-3xl border border-[#dbe5f5] bg-white p-7 shadow-[0_6px_24px_rgba(15,23,42,0.04)] md:p-10">
+          <div className="rounded-3xl border border-[#29445B] bg-[#0B2942] p-7 shadow-[0_8px_26px_rgba(0,0,0,0.16)] md:p-10">
             <div className="max-w-3xl">
-              <Badge>ABOUT MANASVI COMPUTER</Badge>
+              <SectionEyebrow tone="dark">ABOUT MANASVI COMPUTER</SectionEyebrow>
 
-              <h2 className="mt-3 text-3xl font-extrabold text-[#0b1c30]">
+              <h2 className="mt-3 text-3xl font-extrabold text-white">
                 Technology Support With a Personal Touch
               </h2>
 
-              <p className="mt-3 text-sm leading-[22.75px] text-[#434655]">
+              <p className="mt-3 text-sm leading-[22.75px] text-[#CBD5E1]">
                 Manasvi Computer provides computer, hardware parts, CCTV
                 surveillance, networking and website development with a
                 dedicated focus on reliability and transparent technician
@@ -174,7 +174,7 @@ export function AboutSection() {
                 tech running smoothly.
               </p>
 
-              <div className="my-5 grid gap-2 text-xs font-semibold text-[#0b1c30] sm:grid-cols-2">
+              <div className="my-5 grid gap-2 text-xs font-semibold text-[#E2EAF3] sm:grid-cols-2">
                 {[
                   "Direct technician consultation",
                   "Honest diagnostics",

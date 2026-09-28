@@ -100,9 +100,9 @@ export function HeroSection() {
       {/* ========================================
           HERO
       ========================================= */}
-      <section className="relative overflow-hidden py-16 md:py-20">
-        {/* Background Glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(29,78,216,.08),transparent_58%)]" />
+      <section className="relative overflow-hidden bg-[#071A2B] pt-[calc(70px_+_4rem)] pb-16 text-white md:pt-[calc(70px_+_5rem)] md:pb-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(47,128,237,.16),transparent_58%)]" />
+        <div className="pointer-events-none absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(148,190,232,.14)_1px,transparent_1px),linear-gradient(90deg,rgba(148,190,232,.14)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:linear-gradient(to_bottom,black,transparent_90%)]" />
 
         <Container className="relative grid items-center gap-12 lg:grid-cols-2">
           {/* ========================================
@@ -148,7 +148,7 @@ export function HeroSection() {
       ease: [0.16, 1, 0.3, 1],
     }}
   >
-    <span className="inline-flex items-center gap-2 rounded-full border border-[#e5eeff] bg-[#eff4ff] px-3 py-1 text-[11px] font-bold tracking-[.025em] text-[#1d4ed8]">
+    <span className="inline-flex items-center gap-2 rounded-full border border-[#5b8dbb]/50 bg-[#0B2942] px-3 py-1 text-[11px] font-bold tracking-[.025em] text-[#b9d9ff]">
       <motion.i
         initial={{
           opacity: 0,
@@ -167,7 +167,9 @@ export function HeroSection() {
           delay: 0.35,
           ease: [0.16, 1, 0.3, 1],
         }}
-        className="size-2 rounded-full bg-[#1d4ed8]"
+        className="size-2 rounded-full bg-[#2F80ED]"
+          aria-hidden="true"
+
       />
 
       LOCAL TECHNOLOGY & DIGITAL SOLUTIONS
@@ -178,7 +180,7 @@ export function HeroSection() {
       Heading
   ----------------------------------------- */}
   <motion.h1
-    className="mt-4 text-[40px] font-extrabold leading-[1.1] tracking-[-.025em] md:text-[50px] md:leading-14"
+    className="mt-4 text-[40px] font-extrabold leading-[1.1] tracking-[-.025em] text-white md:text-[50px] md:leading-14"
   >
     {/* Technology */}
     <motion.span
@@ -236,7 +238,7 @@ export function HeroSection() {
 
     {/* We've */}
     <motion.span
-      className="mr-[10px] inline-block text-[#1d4ed8]"
+      className="mr-[10px] inline-block text-[#2F80ED]"
       initial={{
         opacity: 0,
         y: 32,
@@ -262,7 +264,7 @@ export function HeroSection() {
 
     {/* Got */}
     <motion.span
-      className="mr-[10px] inline-block text-[#1d4ed8]"
+      className="mr-[10px] inline-block text-[#2F80ED]"
       initial={{
         opacity: 0,
         y: 32,
@@ -288,7 +290,7 @@ export function HeroSection() {
 
     {/* You */}
     <motion.span
-      className="mr-[10px] inline-block text-[#1d4ed8]"
+      className="mr-[10px] inline-block text-[#2F80ED]"
       initial={{
         opacity: 0,
         y: 32,
@@ -314,7 +316,7 @@ export function HeroSection() {
 
     {/* Covered */}
     <motion.span
-      className="inline-block text-[#1d4ed8]"
+      className="inline-block text-[#2F80ED]"
       initial={{
         opacity: 0,
         y: 32,
@@ -342,9 +344,27 @@ export function HeroSection() {
 
             {/* Description */}
             <motion.p
-              variants={heroItem}
-              className="mt-4 max-w-xl text-base leading-7 text-[#434655] md:text-lg"
-            >
+  initial={{
+    opacity: 0,
+    y: 24,
+    filter: "blur(4px)",
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+  }}
+  viewport={{
+    once: false,
+    amount: 0.4,
+  }}
+  transition={{
+    duration: 0.8,
+    delay: 0.85,
+    ease: [0.16, 1, 0.3, 1],
+  }}
+  className="mt-4 max-w-xl text-base leading-7 text-[#c4d3e0] md:text-lg"
+>
               Reliable computer repair, laptop parts, hardware, CCTV,
               networking, printer services and website development for homes,
               shops and businesses.
@@ -352,12 +372,30 @@ export function HeroSection() {
 
             {/* Buttons */}
             <motion.div
-              variants={heroItem}
-              className="mt-6 flex flex-wrap gap-3"
-            >
+  initial={{
+    opacity: 0,
+    y: 24,
+    filter: "blur(4px)",
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+  }}
+  viewport={{
+    once: false,
+    amount: 0.4,
+  }}
+  transition={{
+    duration: 0.8,
+    delay: 1,
+    ease: [0.16, 1, 0.3, 1],
+  }}
+  className="mt-6 flex flex-wrap gap-3"
+>
               <Button
                 href="#contact"
-                className="!px-6 !text-sm !text-white"
+                className="!bg-[#1264D8] !px-6 !text-sm !text-white hover:!bg-[#2F80ED]"
               >
                 Get Service <span>→</span>
               </Button>
@@ -365,7 +403,7 @@ export function HeroSection() {
               <Button
                 href="#services"
                 variant="ghost"
-                className="!border !border-[#dbe7ff] !bg-transparent !text-sm !text-[#1d4ed8] hover:!bg-[#eff4ff]"
+                className="!border !border-white/25 !bg-transparent !text-sm !text-[#b9d9ff] hover:!bg-[#0B2942] hover:!text-white"
               >
                 Explore Services →
               </Button>
@@ -397,9 +435,9 @@ export function HeroSection() {
                   <motion.div
                     key={text}
                     variants={staggerItem}
-                    className="group flex min-h-[62px] items-center gap-3 rounded-2xl border border-[#dfe8f8] bg-gradient-to-br from-[#f8fbff] to-white px-3.5 py-3 shadow-[0_3px_12px_rgba(29,78,216,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#cbdaf2] hover:shadow-[0_7px_18px_rgba(29,78,216,0.09)]"
+                    className="group flex min-h-[62px] items-center gap-3 rounded-2xl border border-[#24445f] bg-gradient-to-br from-[#0B2942] to-[#091f33] px-3.5 py-3 shadow-[0_3px_12px_rgba(0,0,0,0.14)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#397ab8] hover:shadow-[0_7px_18px_rgba(18,100,216,0.16)]"
                   >
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-[#eff4ff] text-[#1d4ed8] ring-1 ring-[#dce8fb]">
+                    <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-[#1264D8]/20 text-[#72b2ff] ring-1 ring-[#62a8ff]/20">
                       <Icon
                         size={18}
                         strokeWidth={2}
@@ -408,13 +446,14 @@ export function HeroSection() {
                       />
                     </span>
 
-                    <span className="text-[11px] font-semibold leading-[15px] text-[#24344d]">
+                    <span className="text-[11px] font-semibold leading-[15px] text-[#e3edf6]">
                       {text}
                     </span>
                   </motion.div>
                 ))}
               </Stagger>
             </motion.div>
+
           </motion.div>
 
           {/* ========================================
@@ -428,23 +467,23 @@ export function HeroSection() {
               once: false,
               amount: 0.2,
             }}
-            className="relative rounded-3xl border border-[#e5eeff] bg-white p-4 shadow-lg"
+            className="relative rounded-3xl border border-[#24445f] bg-[#0B2942] p-4 shadow-lg shadow-black/25"
           >
-            <div className="relative h-[320px] overflow-hidden rounded-2xl bg-[#f1f5f9] md:h-[384px]">
+            <div className="relative h-[320px] overflow-hidden rounded-2xl bg-[#0B2942] md:h-[384px]">
               {/* Main Image */}
               <img
                 src={images.technician}
-                alt="Technician repairing laptop hardware at a workbench"
+                alt="Manasvi Computer technician repairing laptop hardware"
                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
               />
 
               {/* Image Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0b1c30]/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#071A2B]/60 via-transparent to-transparent" />
 
               {/* Professional Support Badge */}
-              <span className="absolute top-3 right-3 rounded-full border border-[#e5eeff] bg-white/95 px-3 py-2 text-[11px] font-bold">
-                <span className="text-[#1d4ed8]">●</span>{" "}
-                <span className="text-[#0b1c30]">
+              <span className="absolute top-3 right-3 rounded-full border border-white/20 bg-[#071A2B]/90 px-3 py-2 text-[11px] font-bold">
+                <span className="text-[#2F80ED]">●</span>{" "}
+                <span className="text-white">
                   Professional Technical Support
                 </span>
               </span>
@@ -468,7 +507,7 @@ export function HeroSection() {
                   delay: 0.45,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="absolute right-3 bottom-3 left-3 flex items-center gap-3 rounded-xl border border-[#e5eeff] bg-white/95 p-3 shadow-md"
+                className="absolute right-3 bottom-3 left-3 flex items-center gap-3 rounded-xl border border-white/15 bg-[#071A2B]/95 p-3 shadow-md"
               >
                 <img
                   src={images.hardware}
@@ -477,16 +516,16 @@ export function HeroSection() {
                 />
 
                 <span className="flex-1">
-                  <strong className="block text-xs">
+                    <strong className="block text-xs text-white">
                     Hardware Bench Diagnostics
                   </strong>
 
-                  <small className="text-[11px] text-[#5c647a]">
+                  <small className="text-[11px] text-[#c4d3e0]">
                     Genuine DDR4 / DDR5, Gen4 NVMe & chip tests
                   </small>
                 </span>
 
-                <b className="rounded-md bg-[#eff4ff] px-2 py-1 text-[11px] text-[#1d4ed8]">
+                <b className="rounded-md bg-[#1264D8]/20 px-2 py-1 text-[11px] text-[#82baff]">
                   Live Lab
                 </b>
               </motion.div>
@@ -498,7 +537,7 @@ export function HeroSection() {
       {/* ========================================
           TRUST STRIP
       ========================================= */}
-      <section className="border-y border-[#dfe8f5] bg-[#f7faff] py-6">
+      <section className="border-y border-[#24445f] bg-[#0B2942] py-6">
         <motion.div
           variants={trustStripContainer}
           initial="hidden"
@@ -513,14 +552,14 @@ export function HeroSection() {
             <motion.div
               key={title}
               variants={trustStripItem}
-              className="group relative flex min-h-[82px] items-center gap-3.5 overflow-hidden rounded-2xl border border-[#dbe5f5] bg-white px-4 py-3.5 shadow-[0_3px_14px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#c7d8ef] hover:shadow-[0_8px_22px_rgba(29,78,216,0.08)]"
+              className="group relative flex min-h-[82px] items-center gap-3.5 overflow-hidden rounded-2xl border border-[#24445f] bg-[#071A2B]/70 px-4 py-3.5 shadow-[0_3px_14px_rgba(0,0,0,0.14)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#397ab8] hover:shadow-[0_8px_22px_rgba(18,100,216,0.14)]"
             >
               {/* Icon */}
               <span
                 className={`flex size-11 shrink-0 items-center justify-center rounded-xl border ${
                   index === 3
-                    ? "border-[#d7eee5] bg-[#ecfdf5] text-[#059669]"
-                    : "border-[#dbe7ff] bg-[#eff4ff] text-[#1d4ed8]"
+                    ? "border-[#4bd0a0]/25 bg-[#0c463f] text-[#70dfb5]"
+                    : "border-[#62a8ff]/25 bg-[#1264D8]/15 text-[#72b2ff]"
                 }`}
               >
                 <Icon
@@ -532,11 +571,11 @@ export function HeroSection() {
 
               {/* Text */}
               <span className="min-w-0">
-                <strong className="block text-[13px] font-semibold text-[#0b1c30]">
+                <strong className="block text-[13px] font-semibold text-white">
                   {title}
                 </strong>
 
-                <small className="mt-0.5 block text-[11px] leading-[16px] text-[#64748b]">
+                <small className="mt-0.5 block text-[11px] leading-[16px] text-[#b9cad9]">
                   {text}
                 </small>
               </span>
@@ -545,8 +584,8 @@ export function HeroSection() {
               <span
                 className={`absolute right-3 bottom-3 size-1.5 rounded-full opacity-40 ${
                   index === 3
-                    ? "bg-[#10b981]"
-                    : "bg-[#1d4ed8]"
+                    ? "bg-[#70dfb5]"
+                    : "bg-[#62a8ff]"
                 }`}
               />
             </motion.div>

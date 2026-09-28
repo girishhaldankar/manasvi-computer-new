@@ -24,18 +24,22 @@ export function ServiceCard({
 }) {
   return (
     <article
-      className={`group relative flex h-full flex-col overflow-hidden rounded-[28px] border transition-all duration-500 hover:-translate-y-1 ${
+      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-white shadow-[0_8px_26px_rgba(11,23,38,0.06)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] ${
         green
-          ? "border-[#cfe9dc] bg-[#f3fbf7] hover:border-[#b8ddca] hover:shadow-[0_20px_50px_rgba(5,150,105,0.10)]"
-          : "border-[#cfddf0] bg-[#f3f7fc] hover:border-[#b9cde7] hover:shadow-[0_20px_50px_rgba(29,78,216,0.10)]"
+          ? "border-[#D6E5F5] hover:border-[#7DB2F8] hover:shadow-[0_18px_40px_rgba(47,128,237,0.14)]"
+          : "border-[#E2E8F0] hover:border-[#9BBFF0] hover:shadow-[0_18px_40px_rgba(18,100,216,0.13)]"
       }`}
     >
       {/* Image */}
-      <div className="relative h-[235px] overflow-hidden">
+      <div
+        className={`relative h-[235px] overflow-hidden ${
+          green ? "bg-[#F0F7FF]" : "bg-[#EEF4FB]"
+        }`}
+      >
         <img
           src={image}
           alt={title}
-          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.045]"
+          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
         />
 
         {/* Image overlay */}
@@ -44,15 +48,15 @@ export function ServiceCard({
         {/* Top status */}
         <div className="absolute top-4 right-4">
           <span
-            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.04em] backdrop-blur-md ${
+            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.04em] ${
               green
-                ? "border-white/60 bg-white/90 text-[#047857]"
-                : "border-white/60 bg-white/90 text-[#1d4ed8]"
+                  ? "border-white bg-white text-[#2F80ED]"
+                  : "border-white bg-white text-[#1264D8]"
             }`}
           >
             <span
               className={`size-1.5 rounded-full ${
-                green ? "bg-[#059669]" : "bg-[#1d4ed8]"
+                green ? "bg-[#2F80ED]" : "bg-[#1264D8]"
               }`}
             />
             {note}
@@ -61,7 +65,7 @@ export function ServiceCard({
 
         {/* Bottom image label */}
         <div className="absolute right-5 bottom-5 left-5">
-          <Badge green={green}>{badge}</Badge>
+          <Badge>{badge}</Badge>
         </div>
       </div>
 
@@ -69,22 +73,22 @@ export function ServiceCard({
       <div className="flex flex-1 flex-col p-6 md:p-7">
         <div>
           <div className="flex items-start justify-between gap-4">
-            <h3 className="text-[25px] font-bold leading-tight tracking-[-0.02em] text-[#0b1c30]">
+            <h3 className="text-[25px] font-bold leading-tight tracking-[-0.02em] text-[#0B1726]">
               {title}
             </h3>
 
             <div
               className={`flex size-9 shrink-0 items-center justify-center rounded-full border transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${
                 green
-                  ? "border-[#cce7d9] bg-[#e8f8ef] text-[#047857]"
-                  : "border-[#d5e2f3] bg-[#eaf2ff] text-[#1d4ed8]"
+                  ? "border-[#D5E6FA] bg-[#F0F7FF] text-[#2F80ED]"
+                  : "border-[#D5E3F4] bg-[#EEF5FF] text-[#1264D8]"
               }`}
             >
               <ArrowUpRight size={17} strokeWidth={2} aria-hidden="true" />
             </div>
           </div>
 
-          <p className="mt-3 text-sm leading-6 text-[#4b5870]">
+          <p className="mt-3 text-sm leading-6 text-[#475569]">
             {description}
           </p>
 
@@ -99,16 +103,16 @@ export function ServiceCard({
         {/* Footer */}
         <div
           className={`mt-6 flex items-center justify-between border-t pt-4 ${
-            green ? "border-[#d8eee2]" : "border-[#dbe5f2]"
+            green ? "border-[#DCEBFA]" : "border-[#E2E8F0]"
           }`}
         >
-          <span className="text-[11px] font-medium text-[#8a96a8]">
+          <span className="text-[11px] font-medium text-[#64748B]">
             Professional service
           </span>
 
           <ArrowLink
             href="#contact"
-            className={green ? "!text-[#006948]" : ""}
+            className={green ? "!text-[#2F80ED]" : "!text-[#1264D8]"}
           >
             {link}
           </ArrowLink>

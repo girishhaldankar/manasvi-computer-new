@@ -14,35 +14,37 @@ export function CategoryCard({
   link: string
 }) {
   return (
-    <article className="group relative flex min-h-[270px] flex-col justify-between overflow-hidden rounded-2xl border border-[#d7e3f5] bg-[#f7faff] p-5 shadow-[0_4px_18px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#bfd2ef] hover:bg-white hover:shadow-[0_12px_30px_rgba(15,23,42,0.09)]">
+    <article className="group relative flex min-h-[270px] flex-col justify-between overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-5 shadow-[0_6px_22px_rgba(11,23,38,0.05)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-[#B8D1F2] hover:shadow-[0_14px_32px_rgba(18,100,216,0.11)]">
       {/* Decorative background accent */}
-      <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#e8f0ff] opacity-90 transition-transform duration-300 group-hover:scale-125" />
+      <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#EAF2FF] opacity-60 transition-transform duration-300 group-hover:scale-125" />
 
       <div className="relative">
-        <span className="inline-flex rounded-full border border-[#cfe0ff] bg-[#eaf2ff] px-2.5 py-1 text-[11px] font-bold text-[#1d4ed8]">
+        <span className="inline-flex rounded-full border border-[#D6E5FA] bg-[#EEF5FF] px-2.5 py-1 text-[11px] font-bold text-[#1264D8]">
   {badge}
 </span>
 
-        <h3 className="mt-3 font-bold  text-lg font-bold text-[#0b1c30]">
+        <h3 className="mt-3 text-lg font-bold text-[#0B1726]">
           {title}
         </h3>
 
-        <p className="mt-1 text-xs leading-5 text-[#5c647a]">
+        <p className="mt-1 text-xs leading-5 text-[#475569]">
           {description}
         </p>
 
-        <ul className="mt-4 space-y-2 text-xs leading-4 text-[#434655]">
+        <ul className="mt-4 space-y-2 text-xs leading-4 text-[#475569]">
           {items.map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="mt-0.5 font-bold text-[#1d4ed8]">✓</span>
+              <span className="mt-0.5 font-bold text-[#1264D8]">✓</span>
               <span>{item}</span>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="relative mt-5 border-t border-[#dfe8f5] pt-3">
-        <ArrowLink href="#contact">{link}</ArrowLink>
+      <div className="relative mt-5 border-t border-[#E2E8F0] pt-3">
+        <ArrowLink href="#contact" className="!text-[#1264D8]">
+          {link}
+        </ArrowLink>
       </div>
     </article>
   )

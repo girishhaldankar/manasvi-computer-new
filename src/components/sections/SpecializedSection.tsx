@@ -9,7 +9,7 @@ import {
 } from "lucide-react"
 import { motion } from "motion/react"
 import { images } from "../../assets"
-import { Badge } from "../ui/Badge"
+import { SectionEyebrow } from "../ui/SectionEyebrow"
 import { Button } from "../ui/Button"
 import { Container } from "../ui/Container"
 import { Reveal } from "../motion/Reveal"
@@ -29,19 +29,19 @@ const networkServices: {
 
 export function SpecializedSection() {
   return (
-    <section className="border-y border-[#e5eeff] bg-[#eff4ff]/50 py-20">
+    <section className="border-y border-[#E2E8F0] bg-[#F5F8FC] py-20">
       <Container className="space-y-10">
         {/* Networking */}
         <Reveal>
-          <article className="grid gap-8 rounded-3xl border border-[#e5eeff] bg-white p-7 md:p-10 lg:grid-cols-[7fr_5fr]">
+          <article className="grid gap-8 rounded-3xl border border-[#E2E8F0] bg-white p-7 shadow-[0_6px_22px_rgba(11,23,38,0.04)] md:p-10 lg:grid-cols-[7fr_5fr]">
             <div>
-              <Badge>NETWORKING & WI-FI</Badge>
+              <SectionEyebrow>NETWORKING & WI-FI</SectionEyebrow>
 
-              <h2 className="mt-3 text-3xl font-extrabold">
+              <h2 className="mt-3 text-3xl font-extrabold text-[#0B1726]">
                 Better Connectivity. Better Coverage.
               </h2>
 
-              <p className="mt-3 text-sm leading-[22.75px] text-[#434655]">
+              <p className="mt-3 text-sm leading-[22.75px] text-[#475569]">
                 We eliminate buffering and spotty wireless signals in
                 commercial offices, warehouses, clinics and multistorey homes.
                 Get professional router setup, structured CAT6 LAN cabling,
@@ -53,12 +53,12 @@ export function SpecializedSection() {
                   <motion.div
                     key={label}
                     variants={staggerItem}
-                    className="flex items-center gap-2 rounded-xl bg-[#eff4ff] p-2.5 text-xs font-semibold"
+                    className="flex items-center gap-2 rounded-xl bg-[#F0F5FC] p-2.5 text-xs font-semibold text-[#0B1726]"
                   >
                     <Icon
                       size={16}
                       strokeWidth={2}
-                      className="shrink-0 text-[#1d4ed8]"
+                      className="shrink-0 text-[#1264D8]"
                       aria-hidden="true"
                     />
                     {label}
@@ -72,7 +72,7 @@ export function SpecializedSection() {
             </div>
 
             <motion.div
-              className="flex min-h-56 flex-col items-center justify-center rounded-2xl border border-[#e5eeff] bg-gradient-to-br from-[#eff4ff] to-[#dbeafe]/60 p-6 text-center"
+              className="flex min-h-56 flex-col items-center justify-center rounded-2xl border border-[#E2E8F0] bg-[#F5F8FC] p-6 text-center"
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -81,20 +81,20 @@ export function SpecializedSection() {
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-              <div className="flex size-14 items-center justify-center rounded-2xl bg-[#eff4ff]">
+              <div className="flex size-14 items-center justify-center rounded-2xl bg-[#EAF2FF]">
                 <Wifi
                   size={28}
                   strokeWidth={2}
-                  className="text-[#1d4ed8]"
+                  className="text-[#1264D8]"
                   aria-hidden="true"
                 />
               </div>
 
-              <h3 className="mt-3 font-bold">
+              <h3 className="mt-3 font-bold text-[#0B1726]">
                 Full Coverage Guarantee
               </h3>
 
-              <p className="mt-1 max-w-xs text-xs leading-[19.5px] text-[#5c647a]">
+              <p className="mt-1 max-w-xs text-xs leading-[19.5px] text-[#475569]">
                 Zero dead zones, high-speed roaming across rooms and clean
                 server rack termination.
               </p>
@@ -104,39 +104,39 @@ export function SpecializedSection() {
 
         {/* CCTV */}
         <Reveal delay={0.08}>
-          <article className="grid gap-8 rounded-3xl border border-[#e5eeff] bg-white p-7 md:p-10 lg:grid-cols-2">
+          <article className="grid gap-8 rounded-3xl border border-[#29445B] bg-[#071A2B] p-7 text-white shadow-[0_12px_30px_rgba(7,26,43,0.14)] md:p-10 lg:grid-cols-2">
             <div>
-              <Badge green>SURVEILLANCE WORKFLOW</Badge>
+              <SectionEyebrow tone="dark">SURVEILLANCE WORKFLOW</SectionEyebrow>
 
-              <h2 className="mt-3 text-3xl font-extrabold">
+              <h2 className="mt-3 text-3xl font-extrabold text-white">
                 Security That You Can Monitor From Anywhere
               </h2>
 
-              <p className="mt-3 text-sm leading-[22.75px] text-[#434655]">
+              <p className="mt-3 text-sm leading-[22.75px] text-[#CBD5E1]">
                 Real-time monitoring on smartphones and tablets with
                 high-definition night vision cameras, continuous DVR recording
                 and reliable power backup.
               </p>
 
-              <div className="mt-5 rounded-2xl border border-[#e5eeff] bg-[#eff4ff] p-4">
-                <b className="text-[11px] tracking-wider text-[#1d4ed8]">
+              <div className="mt-5 rounded-2xl border border-white/10 bg-[#0B2942] p-4">
+                <b className="text-[11px] tracking-wider text-[#8CBFFF]">
                   CONNECTED ARCHITECTURE
                 </b>
 
                 <div className="mt-3 flex flex-wrap items-center gap-2 text-xs font-semibold">
-                  <span className="rounded-lg border border-[#e2e8f0] bg-white px-3 py-2">
+                  <span className="rounded-lg border border-[#E2E8F0] bg-white px-3 py-2 text-[#0B1726]">
                     CCTV Camera
                   </span>
 
                   →
 
-                  <span className="rounded-lg border border-[#e2e8f0] bg-white px-3 py-2">
+                  <span className="rounded-lg border border-[#E2E8F0] bg-white px-3 py-2 text-[#0B1726]">
                     Local DVR / NVR
                   </span>
 
                   →
 
-                  <span className="rounded-lg bg-[#006948] px-3 py-2 text-white">
+                  <span className="rounded-lg bg-[#1264D8] px-3 py-2 text-white">
                     Mobile Live Feed
                   </span>
                 </div>
@@ -144,7 +144,6 @@ export function SpecializedSection() {
 
               <Button
                 href="#contact"
-                variant="green"
                 className="mt-5 !text-white"
               >
                 Get CCTV Service →
@@ -154,7 +153,7 @@ export function SpecializedSection() {
             <motion.img
               src={images.cctv}
               alt="CCTV installation on a commercial wall"
-              className="h-full min-h-[300px] w-full rounded-2xl border border-[#e5eeff] object-cover"
+              className="h-full min-h-[300px] w-full rounded-2xl border border-white/10 object-cover"
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -168,10 +167,10 @@ export function SpecializedSection() {
 
         {/* Printer */}
         <Reveal delay={0.08}>
-          <article className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-[#e5eeff] bg-white p-7 md:flex-row md:items-center">
+          <article className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-[#E2E8F0] bg-white p-7 shadow-[0_6px_22px_rgba(11,23,38,0.04)] md:flex-row md:items-center">
             <div className="max-w-3xl">
               <div className="flex gap-2">
-                <Badge>PRINTER SERVICES</Badge>
+                <SectionEyebrow>PRINTER SERVICES</SectionEyebrow>
 
                 <span className="rounded-full bg-[#f1f5f9] px-3 py-1 text-xs text-[#5c647a]">
                   All Major Brands

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { MessageCircle, Phone } from "lucide-react"
 import { images } from "../../assets"
 import { navItems } from "../../data/site"
@@ -8,25 +8,53 @@ import { MobileMenu } from "./MobileMenu"
 
 export function Header() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const updateScrolled = () => setScrolled(window.scrollY > 8)
+
+    updateScrolled()
+    window.addEventListener("scroll", updateScrolled, { passive: true })
+
+    return () => window.removeEventListener("scroll", updateScrolled)
+  }, [])
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#e5eeff] bg-white/95 backdrop-blur-md">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ease-out ${
+        scrolled
+          ? "border-[#E2E8F0] bg-[rgba(255,255,255,0.78)] shadow-[0_4px_18px_rgba(11,23,38,0.06)] backdrop-blur-[16px]"
+          : "border-transparent bg-transparent shadow-none backdrop-blur-0"
+      }`}
+    >
       <Container className="flex h-[70px] items-center justify-between">
         <a
           href="#"
           className="flex items-center gap-3"
           aria-label="Manasvi Computer home"
         >
-          <span className="size-10 overflow-hidden rounded-xl ring-1 ring-[#dbeafe]">
+          <span
+            className={`size-10 overflow-hidden rounded-xl ring-1 ${
+              scrolled ? "ring-[#dbeafe]" : "ring-white/25"
+            }`}
+          >
             <img src={images.logo} alt="" className="size-full" />
           </span>
 
           <span>
-            <strong className="block text-[17px] font-extrabold leading-[21px] tracking-[-.025em]">
+            <strong
+              className={`block text-[17px] font-extrabold leading-[21px] tracking-[-.025em] ${
+                scrolled ? "text-[#0B1726]" : "text-white"
+              }`}
+            >
               MANASVI COMPUTER
             </strong>
 
-            <small className="block text-[11px] font-medium tracking-[.025em] text-[#5c647a]">
+            <small
+              className={`block text-[11px] font-medium tracking-[.025em] ${
+                scrolled ? "text-[#5c647a]" : "text-white/75"
+              }`}
+            >
               Computer • Hardware • CCTV • Web
             </small>
           </span>
@@ -40,7 +68,11 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium transition-colors hover:text-[#1d4ed8]"
+              className={`text-sm font-medium transition-colors ${
+                scrolled
+                  ? "!text-[#0B1726] hover:!text-[#1264D8]"
+                  : "!text-white hover:!text-[#2F80ED]"
+              }`}
             >
               {item.label}
             </a>
@@ -73,7 +105,11 @@ export function Header() {
           aria-controls="mobile-menu"
           aria-label="Toggle navigation"
           onClick={() => setOpen(!open)}
-          className="flex size-10 items-center justify-center rounded-xl border border-[#e5eeff] lg:hidden"
+          className={`flex size-10 items-center justify-center rounded-xl border lg:hidden ${
+            scrolled
+              ? "border-[#E2E8F0] text-[#0B1726]"
+              : "border-white/25 text-white"
+          }`}
         >
           <span aria-hidden="true" className="text-xl">
             {open ? "×" : "☰"}
