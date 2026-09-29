@@ -470,68 +470,37 @@ export function HeroSection() {
               once: false,
               amount: 0.2,
             }}
-            className="relative rounded-3xl border border-[#24445f] bg-[#0B2942] p-4 shadow-lg shadow-black/25"
+            className="relative mx-auto w-full max-w-[600px] px-1 pt-2 pb-1 sm:px-3"
           >
-            <div className="relative h-[320px] overflow-hidden rounded-2xl bg-[#0B2942] md:h-[384px]">
-              {/* Main Image */}
-              <img
-                src={images.technician}
-                alt="Manasvi Computer technician repairing laptop hardware"
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
-              />
+            <div className="relative z-10 mx-auto w-[94%]">
+              <div className="rounded-[12px] border border-[#3A444D] bg-[#151B20] p-[6px] pb-2 shadow-[0_22px_42px_rgba(0,0,0,0.38),0_0_28px_rgba(47,128,237,0.10)]">
+                <div className="relative h-[180px] overflow-hidden rounded-[6px] border border-[#25323B] bg-[#071A2B] shadow-[inset_0_1px_5px_rgba(0,0,0,0.45)] min-[400px]:h-[210px] sm:h-[250px] md:h-[280px] lg:h-[310px] xl:h-[340px]">
+                  <img
+                    src={images.technician}
+                    alt="Manasvi Computer technician repairing laptop hardware"
+                    className="h-full w-full object-cover object-center"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-[#2F80ED]/[0.06] via-transparent to-transparent"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 top-0 h-[28%] bg-gradient-to-b from-white/[0.10] via-white/[0.025] to-transparent"
+                  />
+                </div>
 
-              {/* Image Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#071A2B]/60 via-transparent to-transparent" />
+                <div className="flex h-[17px] items-center justify-center">
+                  <span className="h-[3px] w-6 rounded-full bg-[#39434B]" />
+                </div>
+              </div>
 
-              {/* Professional Support Badge */}
-              <span className="absolute top-3 right-3 rounded-full border border-white/20 bg-[#071A2B]/90 px-3 py-2 text-[11px] font-bold">
-                <span className="text-[#2F80ED]">●</span>{" "}
-                <span className="text-white">
-                  Professional Technical Support
-                </span>
-              </span>
+              <div className="relative mx-auto h-10 w-12 sm:h-12 sm:w-14">
+                <span className="absolute inset-0 [clip-path:polygon(18%_0,82%_0,100%_100%,0_100%)] bg-gradient-to-b from-[#3B444C] to-[#20272D]" />
+                <span className="absolute top-[48%] left-1/2 h-px w-7 -translate-x-1/2 bg-[#69737B]/35" />
+              </div>
 
-              {/* Hardware Diagnostics Card */}
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  y: 18,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: false,
-                  amount: 0.2,
-                }}
-                transition={{
-                  duration: 0.7,
-                  delay: 0.45,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="absolute right-3 bottom-3 left-3 flex items-center gap-3 rounded-xl border border-white/15 bg-[#071A2B]/95 p-3 shadow-md"
-              >
-                <img
-                  src={images.hardware}
-                  alt=""
-                  className="size-10 rounded-lg object-cover"
-                />
-
-                <span className="flex-1">
-                    <strong className="block text-xs text-white">
-                    Hardware Bench Diagnostics
-                  </strong>
-
-                  <small className="text-[11px] text-[#c4d3e0]">
-                    Genuine DDR4 / DDR5, Gen4 NVMe & chip tests
-                  </small>
-                </span>
-
-                <b className="rounded-md bg-[#1264D8]/20 px-2 py-1 text-[11px] text-[#82baff]">
-                  Live Lab
-                </b>
-              </motion.div>
+              <div className="relative z-10 mx-auto -mt-1 h-3 w-28 rounded-[50%] border border-[#303940] bg-gradient-to-b from-[#39424A] to-[#171D22] shadow-[0_5px_12px_rgba(0,0,0,0.32)] sm:w-36" />
             </div>
           </motion.div>
         </Container>
