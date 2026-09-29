@@ -14,7 +14,7 @@ const webFeatures = [
 
 export function WebStudioSection() {
   return (
-    <section id="web-studio" className="bg-[#F5F8FC] py-20 md:py-24">
+    <section id="web-studio" className="bg-[#F5F8FC] py-20 md:py-24 max-lg:overflow-x-clip">
       <Container className="grid items-center gap-12 lg:grid-cols-2">
         {/* Left Content */}
         <motion.div

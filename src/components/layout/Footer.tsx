@@ -1,4 +1,5 @@
 import { images } from "../../assets"
+import { navItems } from "../../data/site"
 import { Container } from "../ui/Container"
 
 const services = [
@@ -12,12 +13,7 @@ const services = [
   ["Website Development", "#web-studio"],
 ] as const
 
-const companyLinks = [
-  ["About Us", "#about"],
-  ["Why Us", "#about"],
-  ["Reviews", "#reviews"],
-  ["Work We Do", "#gallery"],
-] as const
+const companyLinks = navItems.map(({ label, href }) => [label, href] as const)
 
 export function Footer() {
   return (

@@ -21,7 +21,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ease-out ${
+      className={`sticky inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)] border-b transition-all duration-300 ease-out lg:fixed ${
         scrolled
           ? "border-[#E2E8F0] bg-[rgba(255,255,255,0.78)] shadow-[0_4px_18px_rgba(11,23,38,0.06)] backdrop-blur-[16px]"
           : "border-transparent bg-transparent shadow-none backdrop-blur-0"
@@ -43,12 +43,12 @@ export function Header() {
 
           <span>
             <strong
-              className={`block text-[17px] font-extrabold leading-[21px] tracking-[-.025em] ${
-                scrolled ? "text-[#0B1726]" : "text-white"
-              }`}
-            >
-              MANASVI COMPUTER
-            </strong>
+  className={`block text-[17px] font-extrabold leading-[21px] tracking-[0.06em] ${
+    scrolled ? "text-[#0B1726]" : "text-white"
+  }`}
+>
+  MANASVI COMPUTER
+</strong>
 
             <small
               className={`block text-[11px] font-medium tracking-[.025em] ${

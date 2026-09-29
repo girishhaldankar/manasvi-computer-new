@@ -104,6 +104,7 @@ export function AboutSection() {
                     title={title}
                     description={description}
                     icon={Icon}
+                    variant="trust"
                   />
                 </motion.div>
               )
@@ -125,27 +126,27 @@ export function AboutSection() {
                 <motion.article
                   key={number}
                   variants={staggerItem}
-                  className={`group rounded-2xl border p-5 transition-all duration-300 hover:-translate-y-0.5 ${
-                    index === 3
-                      ? "border-[#29445B] bg-[#0B2942] hover:border-[#397AB8] hover:bg-[#0D304D]"
-                      : "border-[#29445B] bg-[#0B2942] hover:border-[#397AB8] hover:bg-[#0D304D]"
-                  }`}
+                  className="group border-t border-[#29445B] px-4 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#62A8FF]"
                 >
-                  <b
-                    className={`text-2xl ${
-                      index === 3
-                        ? "text-[#8CBFFF]/70"
-                        : "text-[#62A8FF]/70"
-                    }`}
-                  >
-                    {number}
-                  </b>
+                  <div className="flex items-end gap-3">
+                    <b
+                      className={`text-4xl font-extrabold leading-none ${
+                        index === 3 ? "text-[#8CBFFF]" : "text-[#62A8FF]"
+                      }`}
+                    >
+                      {number}
+                    </b>
+                    <span
+                      aria-hidden="true"
+                      className="mb-2 h-px flex-1 bg-[#29445B] transition-colors duration-300 group-hover:bg-[#397AB8]"
+                    />
+                  </div>
 
-                  <h3 className="mt-1 text-sm font-bold text-white">
+                  <h3 className="mt-4 text-sm font-bold text-white">
                     {title}
                   </h3>
 
-                  <p className="mt-1 text-xs leading-4 text-[#CBD5E1]">
+                  <p className="mt-2 text-xs leading-5 text-[#CBD5E1]">
                     {text}
                   </p>
                 </motion.article>
@@ -156,38 +157,59 @@ export function AboutSection() {
 
         {/* About */}
         <Reveal delay={0.08}>
-          <div className="rounded-3xl border border-[#29445B] bg-[#0B2942] p-7 shadow-[0_8px_26px_rgba(0,0,0,0.16)] md:p-10">
-            <div className="max-w-3xl">
-              <SectionEyebrow tone="dark">ABOUT MANASVI COMPUTER</SectionEyebrow>
+          <div className="relative overflow-hidden rounded-3xl border border-[#397AB8]/35 bg-gradient-to-br from-[#0D2D47] via-[#0B2942] to-[#091F33] p-6 shadow-[0_12px_32px_rgba(0,0,0,0.18)] sm:p-8 md:p-10">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#1677FF]/[0.07] blur-3xl sm:-right-24 sm:-top-24 sm:h-72 sm:w-72 sm:bg-[#1677FF]/[0.10]"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-20 left-1/4 h-40 w-40 rounded-full bg-[#38BDF8]/[0.04] blur-3xl sm:-bottom-28 sm:h-64 sm:w-64 sm:bg-[#38BDF8]/[0.06]"
+            />
 
-              <h2 className="mt-3 text-3xl font-extrabold text-white">
-                Technology Support With a Personal Touch
-              </h2>
+            <div className="relative z-10 grid gap-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(280px,0.75fr)] lg:items-center lg:gap-10">
+              <div className="min-w-0">
+                <SectionEyebrow tone="dark">ABOUT MANASVI COMPUTER</SectionEyebrow>
 
-              <p className="mt-3 text-sm leading-[22.75px] text-[#CBD5E1]">
-                Manasvi Computer provides computer, hardware parts, CCTV
-                surveillance, networking and website development with a
-                dedicated focus on reliability and transparent technician
-                access. Whether you need immediate laptop repair, replacement
-                hardware, or a modern digital website, our goal is clear:
-                understand the problem, implement the right fix, and keep your
-                tech running smoothly.
-              </p>
+                <h2 className="mt-4 max-w-3xl text-[28px] font-extrabold leading-[1.15] text-white sm:text-3xl md:text-[34px] md:leading-[1.2]">
+                  Technology Support With a Personal Touch
+                </h2>
 
-              <div className="my-5 grid gap-2 text-xs font-semibold text-[#E2EAF3] sm:grid-cols-2">
+                <p className="mt-4 max-w-3xl text-sm leading-6 text-[#D2DCE7]">
+                  Manasvi Computer provides computer, hardware parts, CCTV
+                  surveillance, networking and website development with a
+                  dedicated focus on reliability and transparent technician
+                  access. Whether you need immediate laptop repair, replacement
+                  hardware, or a modern digital website, our goal is clear:
+                  understand the problem, implement the right fix, and keep your
+                  tech running smoothly.
+                </p>
+              </div>
+
+              <div className="min-w-0 border-t border-[#29445B] pt-6 lg:border-l lg:border-t-0 lg:py-2 lg:pl-8">
+                <div className="grid gap-3 text-xs font-semibold text-[#E2EAF3]">
                 {[
                   "Direct technician consultation",
                   "Honest diagnostics",
                   "Genuine hardware options",
                   "Doorstep & workshop support",
                 ].map((item) => (
-                  <span key={item}>✓ {item}</span>
+                  <span key={item} className="flex min-w-0 items-center gap-2.5">
+                    <span className="flex size-5 shrink-0 items-center justify-center rounded-full border border-[#62A8FF]/25 bg-[#1264D8]/15 text-[#8CBFFF]">
+                      <BadgeCheck size={13} strokeWidth={2.2} aria-hidden="true" />
+                    </span>
+                    <span>{item}</span>
+                  </span>
                 ))}
-              </div>
+                </div>
 
-              <Button href="#contact" className="!text-white">
-                Talk to a Technician →
-              </Button>
+                <Button
+                  href="#contact"
+                  className="mt-6 !min-h-11 !rounded-xl !bg-[#1264D8] !px-6 !text-white !shadow-[0_8px_20px_rgba(18,100,216,0.22)] hover:!bg-[#2F80ED] focus-visible:!outline-[#8CBFFF]"
+                >
+                  Talk to a Technician →
+                </Button>
+              </div>
             </div>
           </div>
         </Reveal>

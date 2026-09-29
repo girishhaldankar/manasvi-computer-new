@@ -12,7 +12,7 @@ export function MobileMenu({
   return (
     <div
       id="mobile-menu"
-      className="border-t border-[#e5eeff] bg-white px-5 py-5 lg:hidden"
+      className="absolute inset-x-0 top-full max-h-[calc(100dvh-71px-env(safe-area-inset-top))] overflow-y-auto overscroll-contain border-t border-[#e5eeff] bg-white px-5 py-5 lg:hidden"
     >
       <nav aria-label="Mobile navigation" className="flex flex-col gap-1">
         {navItems.map((item) => (

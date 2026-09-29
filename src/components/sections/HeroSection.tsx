@@ -100,11 +100,11 @@ export function HeroSection() {
       {/* ========================================
           HERO
       ========================================= */}
-      <section className="relative overflow-hidden bg-[#071A2B] pt-[calc(70px_+_4rem)] pb-16 text-white md:pt-[calc(70px_+_5rem)] md:pb-20">
+      <section className="relative overflow-hidden bg-[#071A2B] pt-16 pb-16 text-white md:pt-20 md:pb-20 lg:flex lg:min-h-[calc(100svh_-_132px)] lg:flex-col lg:pt-[calc(70px_+_1rem)] lg:pb-4">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(47,128,237,.16),transparent_58%)]" />
         <div className="pointer-events-none absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(148,190,232,.14)_1px,transparent_1px),linear-gradient(90deg,rgba(148,190,232,.14)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:linear-gradient(to_bottom,black,transparent_90%)]" />
 
-        <Container className="relative grid items-center gap-12 lg:grid-cols-2">
+        <Container className="relative grid items-center gap-12 lg:my-auto lg:grid-cols-2">
           {/* ========================================
               LEFT CONTENT
           ========================================= */}
@@ -413,7 +413,7 @@ export function HeroSection() {
                 HERO TRUST CARDS
             ========================================= */}
             <motion.div variants={heroItem}>
-              <Stagger className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <Stagger className="mt-7 flex flex-wrap items-center gap-x-3 gap-y-2 xl:gap-x-1">
                 {[
                   {
                     text: "Genuine Parts",
@@ -435,20 +435,23 @@ export function HeroSection() {
                   <motion.div
                     key={text}
                     variants={staggerItem}
-                    className="group flex min-h-[62px] items-center gap-3 rounded-2xl border border-[#24445f] bg-gradient-to-br from-[#0B2942] to-[#091f33] px-3.5 py-3 shadow-[0_3px_12px_rgba(0,0,0,0.14)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#397ab8] hover:shadow-[0_7px_18px_rgba(18,100,216,0.16)]"
+                    className="group inline-flex shrink-0 items-center gap-2 whitespace-nowrap text-xs font-semibold text-[#dbe8f5] transition-colors duration-300 hover:text-white"
                   >
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-[#1264D8]/20 text-[#72b2ff] ring-1 ring-[#62a8ff]/20">
-                      <Icon
-                        size={18}
-                        strokeWidth={2}
-                        className="transition-transform duration-300 group-hover:scale-110"
+                    <Icon
+                      size={17}
+                      strokeWidth={2}
+                      className="shrink-0 text-[#72b2ff] transition-colors duration-300 group-hover:text-[#8CBFFF]"
+                      aria-hidden="true"
+                    />
+                    {text}
+                    {text !== "Local Support" && (
+                      <span
                         aria-hidden="true"
-                      />
-                    </span>
-
-                    <span className="text-[11px] font-semibold leading-[15px] text-[#e3edf6]">
-                      {text}
-                    </span>
+                        className="hidden pl-2 text-[#72b2ff]/45 xl:inline"
+                      >
+                        ·
+                      </span>
+                    )}
                   </motion.div>
                 ))}
               </Stagger>
