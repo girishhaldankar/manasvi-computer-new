@@ -21,12 +21,19 @@ export function Header() {
 
   return (
     <header
-      className={`sticky inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)] border-b transition-all duration-300 ease-out lg:fixed ${
+      className={`sticky inset-x-0 z-50 pt-[env(safe-area-inset-top)] border-b transition-[top,margin-top,background-color,box-shadow,border-color,backdrop-filter] duration-300 ease-out lg:fixed lg:mt-0 ${
         scrolled
-          ? "border-[#E2E8F0] bg-[rgba(255,255,255,0.78)] shadow-[0_4px_18px_rgba(11,23,38,0.06)] backdrop-blur-[16px]"
-          : "border-transparent bg-transparent shadow-none backdrop-blur-0"
+          ? "top-0 mt-0 border-[#E2E8F0] shadow-[0_4px_18px_rgba(11,23,38,0.06)]"
+          : "top-3 mt-3 border-transparent shadow-none"
       }`}
     >
+      <div
+        aria-hidden="true"
+        className={`pointer-events-none absolute inset-0 -z-10 bg-[rgba(255,255,255,0.68)] backdrop-blur-[16px] transition-opacity duration-500 ease-out ${
+          scrolled ? "opacity-100" : "opacity-0"
+        }`}
+      />
+
       <Container className="flex h-[70px] items-center justify-between">
         <a
           href="#"
@@ -83,18 +90,26 @@ export function Header() {
           <Button
             href="tel:+919076335902"
             variant="white"
-            className="!min-h-8 !rounded-full !border !border-[#dbe5f5] !bg-white !px-3 !py-1.5 !text-[#1d4ed8]"
+            className={`!min-h-10 !gap-2 !rounded-xl !border !px-4 !py-2 !text-[13px] !font-semibold !shadow-none !transition-all !duration-300 !ease-out ${
+              scrolled
+                ? "!border-[#CBD5E1] !bg-[#0B1726]/[0.04] !text-[#0B1726] hover:!border-[#94A3B8] hover:!bg-[#0B1726]/[0.08]"
+                : "!border-white/30 !bg-white/10 !text-white hover:!border-white/50 hover:!bg-white/15"
+            }`}
           >
-            <Phone size={13} strokeWidth={2} aria-hidden="true" />
+            <Phone size={16} strokeWidth={2} aria-hidden="true" />
             Call Now
           </Button>
 
           <Button
             href="https://wa.me/919076335902"
             variant="green"
-            className="!min-h-8 !rounded-full !border !border-[#a7f3d0]/60 !bg-[#ecfdf5] !px-3 !py-1.5 !text-[#006948]"
+            className={`!min-h-10 !gap-2 !rounded-xl !border !px-4 !py-2 !text-[13px] !font-semibold !shadow-none !transition-all !duration-300 !ease-out ${
+              scrolled
+                ? "!border-[#B9E8C9] !bg-[#F3FBF6] !text-[#167A3A] hover:!border-[#93D5AA] hover:!bg-[#EAF8F0]"
+                : "!border-[#70dfb5]/40 !bg-[#0c463f]/75 !text-[#b8f3df] hover:!border-[#70dfb5]/60 hover:!bg-[#0c463f]"
+            }`}
           >
-            <MessageCircle size={13} strokeWidth={2} aria-hidden="true" />
+            <MessageCircle size={16} strokeWidth={2} aria-hidden="true" />
             WhatsApp
           </Button>
         </div>
