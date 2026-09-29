@@ -100,7 +100,7 @@ export function HeroSection() {
       {/* ========================================
           HERO
       ========================================= */}
-      <section className="relative overflow-hidden bg-[#071A2B] pt-16 pb-16 text-white md:pt-20 md:pb-20 lg:flex lg:min-h-[calc(100svh_-_132px)] lg:flex-col lg:pt-[calc(70px_+_1rem)] lg:pb-4">
+      <section className="relative overflow-hidden bg-[#071A2B] pt-[134px] pb-16 text-white md:pt-20 md:pb-20 lg:flex lg:min-h-[calc(100svh_-_132px)] lg:flex-col lg:pt-[calc(70px_+_1rem)] lg:pb-4">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(47,128,237,.16),transparent_58%)]" />
         <div className="pointer-events-none absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(148,190,232,.14)_1px,transparent_1px),linear-gradient(90deg,rgba(148,190,232,.14)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:linear-gradient(to_bottom,black,transparent_90%)]" />
 

@@ -20,13 +20,13 @@ export function Header() {
   }, [])
 
   return (
-    <header
-      className={`sticky inset-x-0 z-50 pt-[env(safe-area-inset-top)] border-b transition-[top,margin-top,background-color,box-shadow,border-color,backdrop-filter] duration-300 ease-out lg:fixed lg:mt-0 ${
-        scrolled
-          ? "top-0 mt-0 border-[#E2E8F0] shadow-[0_4px_18px_rgba(11,23,38,0.06)]"
-          : "top-3 mt-3 border-transparent shadow-none"
-      }`}
-    >
+   <header
+  className={`fixed inset-x-0 z-50 pt-[env(safe-area-inset-top)] border-b transition-[top,margin-top,background-color,box-shadow,border-color,backdrop-filter] duration-300 ease-out ${
+    scrolled
+      ? "top-0 mt-0 border-[#E2E8F0] shadow-[0_4px_18px_rgba(11,23,38,0.06)]"
+      : "top-3 mt-3 border-transparent shadow-none"
+  }`}
+>
       <div
         aria-hidden="true"
         className={`pointer-events-none absolute inset-0 -z-10 bg-[rgba(255,255,255,0.68)] backdrop-blur-[16px] transition-opacity duration-500 ease-out ${
