@@ -18,7 +18,7 @@ export function ServicesSection() {
             <SectionHeading
               eyebrow="WHAT WE DO"
               title="Complete Technology Support Under One Roof"
-              description="From repairing a laptop to upgrading a PC, installing CCTV or building a business website, Manasvi Computer provides practical technology solutions from one place."
+              description="From repairing a laptop to upgrading a PC, installing CCTV or building a business website, Manasvi Computers provides practical technology solutions from one place."
             />
           </Reveal>
 

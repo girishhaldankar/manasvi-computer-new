@@ -304,7 +304,7 @@ export const reviews = [
   {
     service: "Wi-Fi & Printer",
     quote:
-      "Our clinic had constant Wi-Fi disconnects and the billing printer stopped connecting over the network. Manasvi Computer sorted router channels and network printer drivers in under an hour.",
+      "Our clinic had constant Wi-Fi disconnects and the billing printer stopped connecting over the network. Manasvi Computers sorted router channels and network printer drivers in under an hour.",
     name: "Dr. Sneha V.",
     role: "Clinic Administrator",
   },

@@ -22,7 +22,7 @@ export function HardwareSection() {
               align="left"
               eyebrow="PARTS & HARDWARE"
               title="Everything You Need to Repair, Upgrade or Build"
-              description="From laptop replacement parts to complete PC components and networking equipment, Manasvi Computer helps you find the right technology for your needs."
+              description="From laptop replacement parts to complete PC components and networking equipment, Manasvi Computers helps you find the right technology for your needs."
             />
 
             <Button

@@ -169,14 +169,14 @@ export function AboutSection() {
 
             <div className="relative z-10 grid gap-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(280px,0.75fr)] lg:items-center lg:gap-10">
               <div className="min-w-0">
-                <SectionEyebrow tone="dark">ABOUT MANASVI COMPUTER</SectionEyebrow>
+                <SectionEyebrow tone="dark">ABOUT MANASVI COMPUTERS</SectionEyebrow>
 
                 <h2 className="mt-4 max-w-3xl text-[28px] font-extrabold leading-[1.15] text-white sm:text-3xl md:text-[34px] md:leading-[1.2]">
                   Technology Support With a Personal Touch
                 </h2>
 
                 <p className="mt-4 max-w-3xl text-sm leading-6 text-[#D2DCE7]">
-                  Manasvi Computer provides computer, hardware parts, CCTV
+                  Manasvi Computers provides computer, hardware parts, CCTV
                   surveillance, networking and website development with a
                   dedicated focus on reliability and transparent technician
                   access. Whether you need immediate laptop repair, replacement

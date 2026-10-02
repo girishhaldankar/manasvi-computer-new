@@ -30,13 +30,13 @@ const details = [
   },
   {
     label: "Working Hours",
-    value: "Mon–Sat: 9 AM–8 PM | Sun: 10 AM–4 PM",
+    value: "Mon–Sat: 9 AM–8 PM | Sun: 12 PM–5 PM",
     icon: Clock3,
     color: "blue",
   },
   {
     label: "Service Areas",
-    value: "Mumbai Service Area & Nearby Locations",
+    value: "Powai, Gokhale Nagar, Chaitanya Nagar & Nearby Mumbai Areas",
     icon: MapPin,
     color: "blue",
   },

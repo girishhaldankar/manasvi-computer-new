@@ -477,7 +477,7 @@ export function HeroSection() {
                 <div className="relative h-[180px] overflow-hidden rounded-[6px] border border-[#25323B] bg-[#071A2B] shadow-[inset_0_1px_5px_rgba(0,0,0,0.45)] min-[400px]:h-[210px] sm:h-[250px] md:h-[280px] lg:h-[310px] xl:h-[340px]">
                   <img
                     src={images.technician}
-                    alt="Manasvi Computer technician repairing laptop hardware"
+                    alt="Manasvi Computers technician repairing laptop hardware"
                     className="h-full w-full object-cover object-center"
                   />
                   <div
